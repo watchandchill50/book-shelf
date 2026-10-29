@@ -10,7 +10,6 @@ import { BooksPage, GalleryPage, QuotesPage } from "./pages/Collections";
 import { PostPage } from "./pages/PostPage";
 import { AboutPage, NotFound, SearchPage } from "./pages/Misc";
 import { Admin } from "./admin/Admin";
-import { Analytics } from "@vercel/analytics/react";
 
 function Routes() {
   const { path } = useLocation();
@@ -45,8 +44,6 @@ function Routes() {
         </p>
       )}
       {page}
-                <Analytics />
-
     </Layout>
   );
 }
