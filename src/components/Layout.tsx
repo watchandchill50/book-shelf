@@ -87,7 +87,7 @@ export function Layout({ children }: { children: ReactNode }) {
                 {l.label}
               </a>
             ))}
-            <Link to="/admin">{isAdmin ? "لوحة التحكم" : "دخول الكاتبة"}</Link>
+            {isAdmin && <Link to="/admin">لوحة التحكم</Link>}
           </span>
         </div>
       </div>
@@ -205,9 +205,11 @@ export function Layout({ children }: { children: ReactNode }) {
                 {theme === "dark" ? <SunIcon /> : <MoonIcon />}
                 {theme === "dark" ? "الوضع الفاتح" : "الوضع الداكن"}
               </button>
-              <Link to="/admin" className="link-btn">
-                {isAdmin ? "لوحة التحكم" : "دخول الكاتبة"}
-              </Link>
+              {isAdmin && (
+                <Link to="/admin" className="link-btn">
+                  لوحة التحكم
+                </Link>
+              )}
             </div>
           </nav>
         </div>
@@ -259,7 +261,7 @@ export function Layout({ children }: { children: ReactNode }) {
           <span>
             © {new Intl.NumberFormat("ar-EG", { useGrouping: false }).format(new Date().getFullYear())} {SITE_NAME}. جميع الحقوق محفوظة.
           </span>
-          <Link to="/admin">{isAdmin ? "لوحة التحكم" : "دخول الكاتبة"}</Link>
+          {isAdmin && <Link to="/admin">لوحة التحكم</Link>}
         </div>
       </footer>
     </>
