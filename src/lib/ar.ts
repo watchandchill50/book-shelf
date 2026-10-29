@@ -64,3 +64,37 @@ export function timeAgo(iso: string) {
   }
   return "الآن";
 }
+
+const dateFmt = new Intl.DateTimeFormat("ar-EG", { day: "numeric", month: "long", year: "numeric" });
+/** ١٢ أكتوبر ٢٠٢٦ */
+export const formatDate = (iso: string) => dateFmt.format(new Date(iso));
+
+/** "٥ دقائق قراءة" — about 180 Arabic words a minute */
+export function readingTime(text: string) {
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const mins = Math.max(1, Math.round(words / 180));
+  return plural(mins, {
+    zero: "أقل من دقيقة",
+    one: "دقيقة قراءة",
+    two: "دقيقتا قراءة",
+    few: "# دقائق قراءة",
+    many: "# دقيقة قراءة",
+    other: "# دقيقة قراءة",
+  });
+}
+
+export const downloadsText = (c: number) =>
+  plural(c, {
+    zero: "لم يُحمَّل بعد",
+    one: "تحميل واحد",
+    two: "تحميلان",
+    few: "# تحميلات",
+    many: "# تحميلًا",
+    other: "# تحميل",
+  });
+
+export function fileSizeText(bytes: number | null) {
+  if (!bytes) return "";
+  if (bytes < 1024 * 1024) return `${n(Math.max(1, Math.round(bytes / 1024)))} ك.ب`;
+  return `${new Intl.NumberFormat("ar-EG", { maximumFractionDigits: 1 }).format(bytes / 1024 / 1024)} م.ب`;
+}

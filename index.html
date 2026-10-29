@@ -3,15 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>رفّ بلال</title>
-    <meta name="description" content="كتب على رفّ بلال. اختر كتابًا، أعجب به، وشاركنا رأيك." />
-    <meta name="theme-color" content="#1F3A5F" />
+    <title>خديجه فاروق المطري</title>
+    <meta name="description" content="موقع ثقافي أدبي: مقالات ونثر وشعر واقتباسات وقراءات وكتب للتحميل." />
+    <meta property="og:title" content="خديجه فاروق المطري" />
+    <meta property="og:description" content="مقالات ونثر وشعر واقتباسات وقراءات وكتب للتحميل." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#2b221c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      try {
+        var t = localStorage.getItem("book-shelf-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="preload" as="image" href="/images/linen-calligraphy.jpg" />
   </head>
   <body>
     <div id="root"></div>
