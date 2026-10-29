@@ -45,11 +45,11 @@ export function Lightbox({ photos, index, onIndex }: Props) {
             <button type="button" className="icon-btn" onClick={() => onIndex(null)} aria-label="إغلاق">
               <CloseIcon />
             </button>
-            {photo.coverUrl && (
+             {photo.coverUrl && (
               <a className="icon-btn" href={photo.coverUrl} download={`${photo.title || "صورة"}`} aria-label="تحميل الصورة" title="تحميل">
                 <DownloadIcon />
               </a>
-            )}
+             )}
           </div>
           <figure className="lb-figure" key={photo.id}>
             {photo.coverUrl && <img src={photo.coverUrl} alt={photo.title} />}
