@@ -174,6 +174,7 @@ code { font-family: ui-monospace, monospace; font-size: 0.9em; direction: ltr; u
 
 .kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 0.82rem; font-weight: 700; color: var(--accent-text); }
 .kicker a { text-decoration: none; }
+.kicker a { margin-bottom: 1.5rem;}
 .kicker a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .kicker span { color: var(--ink-faint); font-weight: 400; }
 .kicker > :first-child:not(:only-child)::after { content: "◆"; margin-inline-start: 10px; font-size: 0.5rem; vertical-align: middle; color: var(--bronze); }
