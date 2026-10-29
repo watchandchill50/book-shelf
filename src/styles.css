@@ -458,7 +458,7 @@ code { font-family: ui-monospace, monospace; font-size: 0.9em; direction: ltr; u
 .book-hero-cover:hover { transform: translateY(-8px) rotate(-1.5deg); }
 .book-hero-cover .cover { box-shadow: 0 34px 50px -22px rgb(0 0 0 / 0.9); }
 .book-hero .kicker span { color: var(--bronze-2); }
-.book-hero .kicker span { margin-bottom: 1.5rem; }
+.book-hero .kicker a { margin-bottom: 1.5rem; }
 .book-hero h3 { font-family: var(--font-display); font-size: 2.6rem; line-height: 1.35; margin: 6px 0 8px; color: #f6eddc; }
 .book-hero h3 a { text-decoration: none; }
 .book-hero-text { color: #cdbca5; margin-bottom: 10px; }
