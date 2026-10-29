@@ -222,7 +222,10 @@ export function Home() {
                   </Link>
                   <div>
                     <p className="kicker">
-                      <span>من كتبي</span>
+                      <span>من كتبي
+
+                        
+                      </span>
                     </p>
                     <h3>
                       <Link to={postPath(myBooks[0])}>{myBooks[0].title}</Link>
